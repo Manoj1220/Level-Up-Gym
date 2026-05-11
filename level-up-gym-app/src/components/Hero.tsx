@@ -2,6 +2,7 @@
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const STATS = [
   { label: 'Active Members', value: '500+' },
@@ -73,7 +74,7 @@ export default function Hero() {
                 'https://lh3.googleusercontent.com/aida-public/AB6AXuDFElee0YZvBULvOZGQ9om4bNcH4PMoqIjiIwpVm0LBnH95gZZXs-yBylKrU5f4wmLhd4DmU5w7saxMOJDHAaXJiBvvNfpse8p5l70dmiLK2MFKUlLYzhPtazCtMHeamEQON5H_qcuWLvs13X10cN21exjfkcDFaDfjigOsgsrbyWvCb3eJwwAn3xRbi9co-VpXAmviC5DlcaKZpZMZQLwdy5YrEr7Y9Z_IsgsKSDe8IhWH9h9QLpu07vHSH6LZKrNM-nWloZPBv06Y',
                 'https://lh3.googleusercontent.com/aida-public/AB6AXuBAiF0RYqX2Y4VXR8mh6cdrYCanFV2J5GRduHYyAAuE7CsQz_hadKfOt-wDYVh3Xysj7bPt6ZNG2PY6ZHP2KSMS7p_EHL4bykvwsSR3FRDHGI7IVsXLBHLdQRi1ibQt8AL9nKJ3ffPGuzWN7eYFa-ylUMPSIqHodUhRLfk3QvGXO-7-H6Wcs0rRDqFzulchokbEI4IRhh9RuancQ0iSYmPU7AZ6Au8vsJvDv1VDXXYZNJhM_LVfjOnqjJSya5aj0EGJJiKskwGPDvMB'
               ].map((src, i) => (
-                <img key={i} alt="Athlete" className="w-8 h-8 rounded-full border-2 border-surface-tint object-cover" src={src} />
+                <Image key={i} alt="Athlete" className="w-8 h-8 rounded-full border-2 border-surface-tint object-cover" src={src} width={32} height={32} />
               ))}
               <div className="w-8 h-8 rounded-full border-2 border-surface-tint bg-surface flex items-center justify-center text-xs font-bold text-surface-tint">+</div>
             </div>

@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { format } from "date-fns";
 import { deleteApplication, markAsContacted } from "./actions";
@@ -9,7 +8,7 @@ export default async function AdminDashboard({
 }: {
   searchParams: Promise<{ q?: string; date?: string; status?: string }>;
 }) {
-  const { q, date, status } = await searchParams;
+  const { q, status } = await searchParams;
 
   const applications = await prisma.application.findMany({
     where: {
